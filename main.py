@@ -1,2 +1,8 @@
 print("Welcome to Git Lab Project")
 print("Student Management System")
+
+student_name = "Ahmed"
+student_age = 20
+
+print("Student Name:", student_name)
+print("Student Age:", student_age)
