@@ -1,0 +1,26 @@
+name: Student Project CI CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Python project
+        run: python3 main.py
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check Python syntax
+        run: python3 -m py_compile main.py
